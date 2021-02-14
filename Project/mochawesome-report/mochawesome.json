@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-14T16:32:19.971Z",
+    "end": "2021-02-14T16:34:31.187Z",
+    "duration": 131216,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e2b8e95f-63e7-412e-9bdb-6442b1191082",
+      "title": "",
+      "fullFile": "cypress\\integration\\wizijSmokeTest.spec.js",
+      "file": "cypress\\integration\\wizijSmokeTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5dcb9ce4-192d-4fe6-b2c6-b72aa5735b55",
+          "title": "Test Wijzij options",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "37b8c0ea-d992-4943-a9d9-ce9338151043",
+              "title": "validate options in wijsig view",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should check that the values of the offer changes on selecting all persons value",
+                  "fullTitle": "Test Wijzij options validate options in wijsig view Should check that the values of the offer changes on selecting all persons value",
+                  "timedOut": null,
+                  "duration": 67616,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Validate all person buttons\nvar personsList = Object.values(_wijzig[\"default\"].persons);\nfor (var i = 0; i < personsList.length; i++) {\n  getOfferValue();\n  prepareForWijzin();\n  cy.get(personsList[i]).parent().parent().should('be.visible').click();\n  cy.contains(_actions[\"default\"].oK).click();\n  cy.wait(timeToRefresh);\n  cy.get('@initialValue').then(function (text) {\n    cy.log(text);\n    validateOfferChangeValue(text);\n  });\n}",
+                  "err": {},
+                  "uuid": "e1b72347-4912-4c86-b7d3-fb9baaf87bb6",
+                  "parentUUID": "37b8c0ea-d992-4943-a9d9-ce9338151043",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should check that the values of the offer changes on selecting all HouseHolds value",
+                  "fullTitle": "Test Wijzij options validate options in wijsig view Should check that the values of the offer changes on selecting all HouseHolds value",
+                  "timedOut": null,
+                  "duration": 36986,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Validate all HouseHolds buttons\nvar woningList = Object.values(_wijzig[\"default\"].woning);\nfor (var i = 0; i < woningList.length; i++) {\n  getOfferValue();\n  prepareForWijzin();\n  cy.get(woningList[i]).parent().parent().should('be.visible').click();\n  cy.contains(_actions[\"default\"].oK).click();\n  cy.wait(timeToRefresh);\n  cy.get('@initialValue').then(function (text) {\n    cy.log(text);\n    validateOfferChangeValue(text);\n  });\n}",
+                  "err": {},
+                  "uuid": "5c9961b1-2fe0-4569-b590-0e220d9127b8",
+                  "parentUUID": "37b8c0ea-d992-4943-a9d9-ce9338151043",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Should check that the values of the offer changes on selecting all Energy Types value ",
+                  "fullTitle": "Test Wijzij options validate options in wijsig view Should check that the values of the offer changes on selecting all Energy Types value ",
+                  "timedOut": null,
+                  "duration": 21458,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Validate all Energy type buttons\nvar gasAndElectricityOptionsList = Object.values(_wijzig[\"default\"].GasAndElectricityOptions);\nfor (var i = 0; i < gasAndElectricityOptionsList.length; i++) {\n  getOfferValue();\n  prepareForWijzin();\n  cy.get(gasAndElectricityOptionsList[i]).parent().parent().should('be.visible').click();\n  cy.contains(_actions[\"default\"].oK).click();\n  cy.wait(timeToRefresh);\n  cy.get('@initialValue').then(function (text) {\n    cy.log(text);\n    validateOfferChangeValue(text);\n  });\n}",
+                  "err": {},
+                  "uuid": "7d380ea3-68d7-454c-8cd5-b5873cce17f3",
+                  "parentUUID": "37b8c0ea-d992-4943-a9d9-ce9338151043",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e1b72347-4912-4c86-b7d3-fb9baaf87bb6",
+                "5c9961b1-2fe0-4569-b590-0e220d9127b8",
+                "7d380ea3-68d7-454c-8cd5-b5873cce17f3"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 126060,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

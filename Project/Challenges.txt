@@ -1,0 +1,4 @@
+//Challenges : 
+//1 - the update rate of the values of the price
+//2 - figuring out how the reporting work
+//3 - figuring out how cypress work in a day

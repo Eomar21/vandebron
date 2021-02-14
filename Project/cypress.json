@@ -1,0 +1,7 @@
+{
+    "reporter": "mochawesome",
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+        "overwrite": true
+    }
+}
