@@ -1,2 +1,2 @@
 # vandebron
-a test project that includes a smoke test of the wijzig functionality 
+a test project example of how to setup a basic cypress framwork
